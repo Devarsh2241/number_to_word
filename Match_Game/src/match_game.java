@@ -180,34 +180,34 @@ public class match_game extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncheckActionPerformed
-        String t1, t2, t3, t4, t5, t6;
-        int rs = 0;
+        String t1, t2, t3, t4, t5;
+        int rs=0;
         t1 = txt1.getText();
         t2 = txt2.getText();
         t3 = txt3.getText();
         t4 = txt4.getText();
         t5 = txt5.getText();
 
-        t6 = t1 + t2 + t3 + t4 + t5;
-        for (int i = 0; i < t6.length(); i++) {
-            if (t1 == "D") {
-                rs += 1;
-            } else if (t2 == "B") {
-                rs += 1;
-            } else if (t3 == "E") {
-                rs += 1;
-            } else if (t4 == "A") {
-                rs += 1;
-            } else if (t5 == "C") {
-                rs += 1;
-            } else {
-                rs+=1;
-            }
+       
+        if(t1=="D"){
+            rs+=1;
         }
-
-        String str = String.valueOf(rs);
-        lblresult.setText(str);
+        else if(t2=="B"){
+            rs+=1;
+        }
+        else if(t3=="E"){
+            rs+=1;
+        }
+        else if(t4=="A"){
+            rs+=1;
+        }
+        else if(t5=="C"){
+            rs+=1;
+        }
+        
+        JOptionPane.showMessageDialog(match_game.this, rs);
     }//GEN-LAST:event_btncheckActionPerformed
+
 
     private void btnclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclearActionPerformed
 
